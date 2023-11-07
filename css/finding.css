@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.app {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  overflow: hidden;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.rect {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: move;
+  outline: 999999px solid rgba(0, 0, 0, 0.88);
+  border-radius: 50%;
+  user-select: none;
+}

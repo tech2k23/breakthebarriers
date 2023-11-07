@@ -1,20 +1,16 @@
 
 body {
-	background: url(/final/files/l1.jpeg) no-repeat center;
+	background: url(https://i.imgur.com/OBJVB60.jpeg) no-repeat center;
 	background-color: #2d1e0a;
 	background-size: cover;
-	--gold: url(/final/files/l2.jpg);
-	--pattern: url(/final/files/l3.png);
-	--wood: url(/final/files/l4.jpg);
+	--gold: url(https://i.imgur.com/XQUW5Ad.jpg);
+	--pattern: url(https://i.imgur.com/tYl3xKT.png);
+	--wood: url(https://i.imgur.com/8B8ZDAn.png);
 }
 
 img {
 	width: 70px;
 	filter: drop-shadow(0 0 2px #666);
-}
-
-#giff img{
-	width: 550px;
 }
 
 .showCheck, .showHint {

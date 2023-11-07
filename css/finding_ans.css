@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shantell+Sans:wght@300&display=swap');
+
+body{
+  background-image: url("../files/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.all{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.f{
+  
+  width: 700px;
+  height: 700px;
+  background-image: url("../files/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid rgb(65, 186, 186);
+  border-style: dotted;
+}
+.full{
+  
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.in{
+  
+  font-size: 30px;
+  color:#FFFFFF;
+  font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.in:hover{
+  cursor: pointer;
+}
+::placeholder{
+  text-align: center;
+  color: rgb(17, 16, 16);
+  font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  
+  
+}
+label{
+  position: relative;
+  top: 5px;
+  font-size: 30px;
+  color:#FFFFFF;
+  font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    /* color: rgb(152, 217, 128); */
+}
+
+a{
+  color: rgb(238, 244, 130);
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  
+  
+}
+.button{
+    background-color: rgb(247, 14, 14);
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  
+    
+}
+.button:hover{
+  cursor: pointer;
+  background-color: rgb(11, 160, 11);
+  transition: .2s;
+}
+.h{
+  height: 30px;
+  width: 150px;
+  font-size: 15px;
+  border-color: rgb(102, 8, 126);
+  color: rgb(5, 5, 5);
+  background-color: rgb(193, 236, 178);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  
+
+  
+}
+.h:hover{
+  cursor: pointer;
+  border-color: red;
+}

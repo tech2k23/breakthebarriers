@@ -1,0 +1,304 @@
+::root {
+	--contrast-layer-dark: hsla(323, 0%, 15%, 1);
+	--contrast-layer-light: hsla(323, 0%, 35%, 1);
+}
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 0 0 2px white;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+}
+.background-ph {
+	background-color: hsla(255, 0%, 1%, 1);
+	height: 100%;
+	width: 100%;
+}
+.tv {
+	display: grid;
+	grid-template-columns: 75% 25%;
+	background-color: hsla(255, 0%, 5%, 1);
+	/*   border: 6px solid hsla(255, 0%, 5%, 1); */
+	border-radius: 1rem;
+	width: 100%;
+	height: 100%;
+	gap: 1.5rem;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	justify-content: fit-content;
+	padding: 1rem;
+	padding-right: 1.5rem;
+	box-shadow: inset 0 0 0.5rem 0.25rem hsla(255, 0%, 10%, 1);
+}
+
+/* Screen */
+.screen-container {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	border-radius: 5%;
+	position: relative;
+	padding: 10px;
+	border-radius: 1.5rem;
+	/*   box-shadow: 0 0 .5rem .25rem hsla(255, 0%, 1%, .5); */
+}
+.channel-number {
+	position: absolute;
+	right: 2rem;
+	top: 1.5rem;
+	color: limegreen;
+	font-size: 1.5rem;
+	font-family: Gill Sans, sans-serif;
+	opacity: 0.4;
+	z-index: 2;
+}
+.screen-mask {
+	height: 101%;
+	width: 101%;
+	position: absolute;
+	top: 0%;
+	border-radius: 1.5rem;
+	border: 1rem solid hsla(255, 0%, 3%, 1);
+	/*   padding: 20px; */
+	z-index: 2;
+	box-shadow: inset 0 0 0.25rem 0.25rem black;
+}
+
+.content-page1,
+.content-page3,
+.content-page5,
+.content-page7 {
+	z-index: 1;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	position: absolute;
+	color: limegreen;
+	width: 100%;
+	height: 100%;
+	font-size: 0.9rem;
+	text-align: left;
+	text-shadow: 0 0 0.25rem green, 0 0 0.13rem white;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.content-page1 {
+	padding: 2.5rem;
+	list-style-position: inside;
+}
+.content-page3 {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: space-between;
+	text-align: center;
+	padding: 3rem;
+	z-index: 2;
+}
+.content-page3 > h3 {
+	flex-grow: 1;
+}
+.portfolio-items {
+	flex-grow: 2;
+	list-style-type: circle;
+	color: white;
+	text-shadow: 0 0 0.13rem white;
+	text-align: left;
+	padding-inline: 25%;
+	line-height: 200%;
+}
+.content-page3 > footer > a,
+.content-page3 > footer {
+	color: lightblue;
+	font-weight: bold;
+	text-shadow: 0 0 0.25rem blue, 0 0 0.13rem white;
+}
+.content-page5 {
+	padding: 2.5rem;
+}
+.content-page7 {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 2rem;
+}
+.video-wrapper {
+	height: 100%;
+	width: 100%;
+}
+.video-test {
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+}
+@media (height < 380px) {
+	.display-page1,
+	.display-page3,
+	.display-page5,
+	.display-page7 {
+		font-size: 0.5rem;
+	}
+}
+.static-layer {
+	height: 100%;
+	width: 100%;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.75) 100%
+	);
+	position: absolute;
+	transition: none;
+	z-index: 0;
+	background-color: red;
+	z-index: -2;
+}
+.contrast-layer {
+	background-color: var(--contrast-layer-dark);
+	z-index: -1;
+	border-radius: 1.5rem;
+	height: 100%;
+	width: 100%;
+	margin: 1px;
+	box-shadow: inset 0 0 0.4em 0.25rem hsla(255, 0%, 5%, 0.75);
+}
+
+/* Controls */
+.control-container {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 101%;
+	align-items: center;
+	border-radius: 0.5rem;
+	gap: 2%;
+	padding-block-start: 5%;
+	padding-block-end: 5%;
+	background-image: url("https://media.istockphoto.com/id/504986070/photo/imitation-leather-black-pvc-or-background.jpg?b=1&s=170667a&w=0&k=20&c=8goWOroHINQOXLndbiGLYg9HCfBn4vD80VxGmZbxnS4=");
+	background-size: cover;
+}
+.channel-knob {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.knob-wrapper {
+	width: 75%;
+	padding-top: 5%;
+}
+.power-button {
+	width: fit-content;
+	border: 2px solid hsla(148, 0%, 10%, 0.75);
+	background-color: darkred;
+	padding-block: 2%;
+	padding-inline: 2%;
+	user-select: none;
+	font-family: Andale Mono, monospace;
+	text-shadow: 0px 0px 0px transparent;
+	font-weight: bold;
+}
+.grill {
+	box-shadow: inset 0 0 0.25rem 0.1rem hsla(255, 0%, 5%, 0.75),
+		0 0 0.25rem 0.1rem hsla(255, 0%, 5%, 0.75);
+	background-image: url("https://thumbs.dreamstime.com/b/metal-grill-1425012.jpg");
+	height: 100%;
+	width: 90%;
+	background-size: cover;
+	border: 2px solid hsla(148, 0%, 0%, 0.75);
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+/* Animation Layers */
+.rotate45 {
+	transform: rotate(45deg);
+	transition: transform 0.25s;
+}
+.rotate90 {
+	transform: rotate(90deg);
+	transition: transform 0.25s;
+}
+.rotate135 {
+	transform: rotate(135deg);
+	transition: transform 0.25s;
+}
+.rotate180 {
+	transform: rotate(180deg);
+	transition: transform 0.25s;
+}
+.rotate225 {
+	transform: rotate(225deg);
+	transition: transform 0.25s;
+}
+.rotate270 {
+	transform: rotate(270deg);
+	transition: transform 0.25s;
+}
+.rotate315 {
+	transform: rotate(315deg);
+	transition: transform 0.25s;
+}
+.rotate0 {
+	transform: rotate(360deg);
+	transition: transform 0.25s;
+}
+.noise {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	margin: 1px;
+	background: transparent url(https://i.ibb.co/XzHjkwz/noise.png) 0 0;
+	background-size: 100% 100%;
+	opacity: 0.35;
+	animation: noise 0.5s steps(1, end) infinite both;
+	border-radius: 1.5rem;
+}
+
+@keyframes noise {
+	0% {
+		transform: scaleX(-1);
+	}
+	10% {
+		transform: scaleX(1);
+	}
+	20% {
+		transform: scaleY(-1);
+	}
+	30% {
+		transform: scaleY(1);
+	}
+	40% {
+		transform: scaleX(-1);
+	}
+	50% {
+		transform: scaleY(-1);
+	}
+	60% {
+		transform: scaleX(1);
+	}
+	70% {
+		transform: scaleY(-1);
+	}
+	80% {
+		transform: scaleY(1);
+	}
+	90% {
+		transform: scaleX(-1);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
