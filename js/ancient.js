@@ -50,7 +50,7 @@ circles[4].addEventListener("click", function(){
 hint.addEventListener("click",function(){
   hint.classList.toggle("showHint");
   if(hint.className.match(/\bshowCheck\b/)){
-    hint.innerHTML = `<img src="/final/files/hint.png"/>`;
+    hint.innerHTML = `<img src="final/files/hint.png"/>`;
     this.className = "";
     circles[1].style.transform += "rotate(-195deg)";
     circles[2].style.transform += "rotate(360deg)";
